@@ -8,3 +8,61 @@ OCR hoàn thành!
 Task 0 start
 Task 0 done in 1.59 seconds
 OCR hoàn thành!
+
+=== Run 3 | 2026-03-25 16:40:41 ===
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG19_BN_Weights.IMAGENET1K_V1`. You can also use `weights=VGG19_BN_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/vgg19_bn-c79401a0.pth" to C:\Users\nguye/.cache\torch\hub\checkpoints\vgg19_bn-c79401a0.pth
+  0%| | 0.00/548M [00:00<?,  0%| | 2.38M/548M [00:00<0  1%| | 4.88M/548M [00:00<0  2%| | 13.6M/548M [00:00<0  4%| | 22.6M/548M [00:00<0  6%| | 31.8M/548M [00:00<0  7%| | 39.4M/548M [00:00<0  9%| | 50.8M/548M [00:00<0 11%| | 60.0M/548M [00:00<0 13%|▏| 69.0M/548M [00:00<0 15%|▏| 81.2M/548M [00:01<0 17%|▏| 91.0M/548M [00:01<0 18%|▏| 100M/548M [00:01<00 20%|▏| 110M/548M [00:01<00 22%|▏| 119M/548M [00:01<00 23%|▏| 126M/548M [00:01<00 25%|▏| 136M/548M [00:01<00 26%|▎| 144M/548M [00:01<00 28%|▎| 152M/548M [00:02<00 29%|▎| 161M/548M [00:02<00 31%|▎| 170M/548M [00:02<00 33%|▎| 179M/548M [00:02<00 34%|▎| 187M/548M [00:02<00 36%|▎| 199M/548M [00:02<00 38%|▍| 208M/548M [00:02<00 39%|▍| 216M/548M [00:02<00 41%|▍| 226M/548M [00:03<00 43%|▍| 237M/548M [00:03<00 45%|▍| 246M/548M [00:03<00 46%|▍| 254M/548M [00:03<00 48%|▍| 263M/548M [00:03<00 50%|▍| 272M/548M [00:03<00 51%|▌| 280M/548M [00:03<00 53%|▌| 290M/548M [00:03<00 55%|▌| 299M/548M [00:03<00 57%|▌| 311M/548M [00:04<00 58%|▌| 320M/548M [00:04<00 60%|▌| 329M/548M [00:04<00 61%|▌| 336M/548M [00:04<00 63%|▋| 345M/548M [00:04<00 65%|▋| 357M/548M [00:04<00 67%|▋| 366M/548M [00:04<00 68%|▋| 374M/548M [00:04<00 70%|▋| 384M/548M [00:05<00 72%|▋| 392M/548M [00:05<00 73%|▋| 400M/548M [00:05<00 75%|▋| 409M/548M [00:05<00 77%|▊| 420M/548M [00:05<00 79%|▊| 432M/548M [00:05<00 80%|▊| 441M/548M [00:05<00 82%|▊| 450M/548M [00:05<00 84%|▊| 459M/548M [00:05<00 86%|▊| 471M/548M [00:06<00 88%|▉| 480M/548M [00:06<00 89%|▉| 489M/548M [00:06<00 91%|▉| 498M/548M [00:06<00 93%|▉| 509M/548M [00:06<00 95%|▉| 518M/548M [00:06<00 96%|▉| 528M/548M [00:06<00 98%|▉| 536M/548M [00:06<00100%|▉| 546M/548M [00:06<00100%|█| 548M/548M [00:07<00
+Task 0 start
+Traceback (most recent call last):
+  File "D:\ORC scan file\deepdoc_vietocr\t_ocr.py", line 125, in <module>
+    main(args)
+    ~~~~^^^^^^
+  File "D:\ORC scan file\deepdoc_vietocr\t_ocr.py", line 112, in main
+    trio.run(__ocr_launcher)
+    ~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\trio\_core\_run.py", line 2552, in run
+    raise runner.main_task_outcome.error
+  File "D:\ORC scan file\deepdoc_vietocr\t_ocr.py", line 110, in __ocr_launcher
+    await __ocr_thread(i, 0, img)
+  File "D:\ORC scan file\deepdoc_vietocr\t_ocr.py", line 100, in __ocr_thread
+    __ocr(i, id, img)
+    ~~~~~^^^^^^^^^^^^
+  File "D:\ORC scan file\deepdoc_vietocr\t_ocr.py", line 78, in __ocr
+    bxs = ocr(np.array(img), id)
+  File "D:\ORC scan file\deepdoc_vietocr\module\ocr.py", line 453, in __call__
+    rec_res, elapse = self.text_recognizer[device_id](img_crop_list)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\ORC scan file\deepdoc_vietocr\module\ocr.py", line 155, in __call__
+    text = self.detector.predict(img)
+  File "D:\ORC scan file\deepdoc_vietocr\vietocr\tool\predictor.py", line 15, in predict
+    img = process_input(img, self.config['dataset']['image_height'],
+                        self.config['dataset']['image_min_width'],
+                        self.config['dataset']['image_max_width'])
+  File "D:\ORC scan file\deepdoc_vietocr\vietocr\tool\translate.py", line 78, in process_input
+    img = process_image(image, image_height, image_min_width, image_max_width)
+  File "D:\ORC scan file\deepdoc_vietocr\vietocr\tool\translate.py", line 70, in process_image
+    img = img.resize((new_w, image_height), Image.ANTIALIAS)
+                                            ^^^^^^^^^^^^^^^
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+
+=== Run 4 | 2026-03-25 16:41:08 ===
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG19_BN_Weights.IMAGENET1K_V1`. You can also use `weights=VGG19_BN_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Task 0 start
+Task 0 done in 2.00 seconds
+OCR hoàn thành!
+
+=== Run 5 | 2026-03-25 16:43:34 ===
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\nguye\AppData\Local\Programs\Python\Python313\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG19_BN_Weights.IMAGENET1K_V1`. You can also use `weights=VGG19_BN_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Task 0 start
+Task 0 done in 1.99 seconds
+OCR hoàn thành!

@@ -16,13 +16,16 @@
 
 import os
 import sys
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.dirname(
-                os.path.abspath(__file__)),
-            '../../')))
+
+# Add current directory to path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
+# Add vietocr to path for internal imports
+vietocr_dir = os.path.join(current_dir, "vietocr")
+if vietocr_dir not in sys.path:
+    sys.path.append(vietocr_dir)
 
 from module.seeit import draw_box
 from module.ocr import OCR

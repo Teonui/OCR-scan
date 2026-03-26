@@ -116,3 +116,11 @@ Traceback (most recent call last):
 AttributeError: type object 'LayoutRecognizer4YOLOv10' has no attribute 'find_overlapped_with_threshold'. Did you mean: 'find_overlapped_with_threashold'?
 
 === Run 10 | 2025-08-28 18:16:46 ===
+
+=== Run 11 | 2026-03-25 16:41:58 ===
+Image 0:
+  Detected label: figure
+
+=== Run 12 | 2026-03-25 16:44:08 ===
+Image 0:
+  Detected label: figure

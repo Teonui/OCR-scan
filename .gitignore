@@ -17,3 +17,4 @@ check_imports.py
 import_error.log
 vietocr_files.log
 vietocr_files_utf8.log
+.env

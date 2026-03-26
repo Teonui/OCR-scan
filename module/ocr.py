@@ -283,7 +283,9 @@ class OCR:
         ^_-
 
         """
-
+        import sys
+        import os
+        sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../vietocr")))
         if not model_dir:
             try:
                 model_dir = os.path.join(

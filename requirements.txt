@@ -11,3 +11,9 @@ pyclipper
 ruamel.yaml
 cachetools
 six
+fastapi
+uvicorn
+pydantic
+mem0ai
+python-dotenv
+google-generativeai
